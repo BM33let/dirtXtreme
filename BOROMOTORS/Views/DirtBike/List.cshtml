@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BOROMOTORS.Models.DirtBike>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirt Bikes</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <style>
+        .bike-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .card {
+            flex: 0 0 30%; /* По три мотора на ред */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+        }
+
+            .card img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px 8px 0 0;
+            }
+
+            .card video {
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">DirtXtreme</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/DirtBike/List">Dirt Bikes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bikes">
+        <h2 class="section-title">Our Dirt Bikes</h2>
+        <div class="bike-grid">
+            @foreach (var bike in Model)
+            {
+                <div class="card">
+                    <img src="@bike.ImageUrl" alt="@bike.Model">
+                    <h3>@bike.Model</h3>
+                    <p>Manufacturer: @bike.Manufacturer</p>
+                    <p>Price: $@bike.Price</p>
+                    <p>Top Speed: @bike.TopSpeed mph</p>
+                    <p>Horsepower: @bike.Horsepower HP</p>
+                    <p>Weight: @bike.Weight lbs</p>
+                    <p>@bike.Description</p>
+                    <video controls>
+                        <source src="@bike.VideoUrl" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            }
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DirtXtreme. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

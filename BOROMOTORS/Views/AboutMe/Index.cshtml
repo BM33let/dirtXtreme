@@ -1,0 +1,43 @@
+﻿@model BOROMOTORS.Models.AboutMeModel
+
+@{
+    ViewData["Title"] = "About Me";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DirtXtreme</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/DirtBike/Index">Dirt Bikes</a></li>
+                <li><a href="/Order/Index">Orders</a></li>
+                <li><a href="/Customer/Index">Customers</a></li>
+                <li><a href="/AboutMe">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-me">
+            <h2>@Model.Name</h2>
+            <img src="@Model.ImageUrl" alt="@Model.Name" width="200" height="200" />
+            <p>@Model.Bio</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; DirtXtreme</p>
+    </footer>
+</body>
+</html>

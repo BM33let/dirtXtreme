@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <style>
+        /* Стилове за деактивирания бутон */
+        .disabled-btn {
+            color: #aaa;
+            background-color: #ddd;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">DirtXtreme</h1>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Explore the Best Dirt Bikes</h1>
+                <p>Your ultimate destination for off-road adventures.</p>
+                <!-- Работещ бутон -->
+                <a href="/DirtBike/Index" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DirtXtreme. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

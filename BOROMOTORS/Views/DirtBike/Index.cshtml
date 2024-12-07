@@ -1,0 +1,137 @@
+﻿@model IEnumerable<BOROMOTORS.Models.DirtBike>
+@{
+    ViewData["Title"] = "Dirt Bikes";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">DirtXtreme</h1> 
+        </div>
+    </header>
+
+    <section class="dirtbikes-list">
+
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIq835m0k5UNvtfnO0Lu0bjaygM4PPvi0B3A&s" alt="Dirt Bike Model 1" width="500" height="300">
+            <h4>Honda CRF450R</h4>
+            <p>Price:  $9,599</p>
+            <p>Transmission:5-speed manual</p>
+            <p>Horsepower: 55 HP</p>
+            <p>Top Speed: Approximately 90 mph (145 km/h)
+            <p>Weight: 244 lbs (111 kg)</p>
+            <p>Rent: $1,800–$2,500 per month</p>
+            <p>Engine:449cc liquid-cooled, single-cylinder four-stroke </p>
+            <p>Description: Known for its excellent handling and stability, the CRF450R has a lightweight aluminum frame, superior suspension, and an advanced fuel injection system for smooth throttle response.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGnX7RJZb_nIfqsaVf4YAYMhUAXQFlycVHeQ&s" alt="Dirt Bike Model 2">
+            <h4>Yamaha YZ450F</h4>
+            <p>Price: $9,799</p>
+            <p>Weight: 245 lbs (111 kg)</p>
+            <p>Horsepower: 58 HP</p>
+            <p>Transmission: 5-speed manual</p>
+            <p>Engine: 450cc liquid-cooled, DOHC four-stroke</p>
+            <p>Top Speed: Approximately 85 mph (137 km/h)</p>
+            <p>Rent: $1,800–$2,500 per month</p>
+            <p>Description: Equipped with Yamaha’s Power Tuner app, this bike allows riders to adjust engine mapping via their smartphone. The YZ450F also has a lightweight chassis and KYB suspension, providing excellent balance and control.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwtcH6NyzcY5p8Wcio6V79DarvsseMdyC1YQ&s" alt="KTM 250 SX-F">
+            <h4>KTM 250 SX-F</h4>
+            <p>Price: $8,499</p>
+            <p>Weight: 231 lbs (105 kg)</p>
+            <p>Horsepower: 47 HP</p>
+            <p>Transmission: 5-speed manual</p>
+            <p>Engine: 249cc liquid-cooled, four-stroke single</p>
+            <p>Top Speed: Approximately 85 mph (137 km/h)</p>
+            <p>Rent:$1,200–$1,800 per month</p>
+            <p>Description: The KTM 250 SX-F offers a powerful engine and lightweight design, providing excellent acceleration and handling on both trails and tracks. It’s highly regarded for its precision and performance under demanding conditions.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYBUBN8gtmNfzSFru9CKIF6rw15C7ixLdThA&s" alt="Kawasaki KX250">
+            <h4>Kawasaki KX250</h4>
+            <p>Price: $7,799</p>
+            <p>Weight: 234 lbs (106 kg)</p>
+            <p>Horsepower: 47 HP</p>
+            <p>Transmission: 5-speed manual</p>
+            <p>Engine: 249cc liquid-cooled, four-stroke single</p>
+            <p>Top Speed: Approximately 82 mph (132 km/h)</p>
+            <p>Rent: $800–$1,200 per month</p>
+            <p>Description: The Kawasaki KX250 is designed with high-performance motocross riders in mind, featuring a strong engine and advanced suspension. It's perfect for riders looking to get ahead of the competition.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHWgFgoZLAzrBuQ2X5lzWSl3VdnpCT1pXipQ&s" alt="Suzuki RMX450Z">
+            <h4>Suzuki RMX450Z</h4>
+            <p>Price: $8,699</p>
+            <p>Weight: 258 lbs (117 kg)</p>
+            <p>Horsepower: 51 HP</p>
+            <p>Transmission: 5-speed manual</p>
+            <p>Engine: 449cc liquid-cooled, four-stroke single</p>
+            <p>Top Speed: Approximately 85 mph (137 km/h)</p>
+            <p>Rent:$1,200–$1,800 per month</p>
+            <p>Description: The RMX450Z is an enduro-focused bike that balances power with control, making it ideal for long-distance off-road riding. With a robust engine and durable design, it excels in challenging conditions.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD6kdGeAwWtIW1wb_ZygShYLLvGsMPpybokw&s" alt="KTM 300 XC-W">
+            <h4>KTM 300 XC-W</h4>
+            <p>Price: $9,099</p>
+            <p>Weight: 233 lbs (106 kg)</p>
+            <p>Horsepower: 55 HP</p>
+            <p>Transmission: 6-speed manual</p>
+            <p>Engine: 293cc liquid-cooled, two-stroke single</p>
+            <p>Top Speed: Approximately 87 mph (140 km/h)</p>
+            <p>Rent:$1,800–$2,500 per month</p>
+            <p>Description: The KTM 300 XC-W is known for its high power-to-weight ratio and excellent trail performance. It’s a two-stroke engine that delivers incredible torque and acceleration, perfect for tough, technical riding.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3btyu1_WLesvmf_RX1Y_zvAaZm8Yp8GoV8Q&s" alt="Yamaha WR250F">
+            <h4>Yamaha WR250F</h4>
+            <p>Price: $8,599</p>
+            <p>Weight: 245 lbs (111 kg)</p>
+            <p>Horsepower: 44 HP</p>
+            <p>Transmission: 6-speed manual</p>
+            <p>Engine: 250cc liquid-cooled, four-stroke single</p>
+            <p>Top Speed: Approximately 85 mph (137 km/h)</p>
+            <p>Rent:$1,200–$1,800 per month</p>
+            <p>Description: The WR250F is an exceptional enduro bike with excellent suspension, power delivery, and overall durability. It’s built for long-distance trail riding and can handle any obstacles with ease.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3GnLeBi-Gn8gXOUOCoQsDpknvj9T-x9v2Q&s" alt="Beta 300 RR">
+            <h4>Beta 300 RR</h4>
+            <p>Price: $9,299</p>
+            <p>Weight: 235 lbs (107 kg)</p>
+            <p>Horsepower: 50 HP</p>
+            <p>Transmission: 6-speed manual</p>
+            <p>Engine: 293cc liquid-cooled, two-stroke single</p>
+            <p>Top Speed: Approximately 85 mph (137 km/h)</p>
+            <p>Rent:$1,800–$2,500 per month</p>
+            <p>Description: The Beta 300 RR is an agile and powerful two-stroke machine that offers a balanced ride for trail and enduro riders. It provides excellent power and precise handling on rough terrain.</p>
+        </div>
+        <div class="dirtbike">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVFc144i4PTsjDYZq9wsRVl8D205bKNEzUFQ&s" alt="Sherco 300 SE-R">
+            <h4>Sherco 300 SE-R</h4>
+            <p>Price: $9,699</p>
+            <p>Weight: 239 lbs (108 kg)</p>
+            <p>Horsepower: 50 HP</p>
+            <p>Transmission: 6-speed manual</p>
+            <p>Engine: 293cc liquid-cooled, two-stroke single</p>
+            <p>Top Speed: Approximately 86 mph (138 km/h)</p>
+            <p>Rent:$1,800–$2,500 per month</p>
+            <p>Description: The Sherco 300 SE-R is built for extreme conditions, with advanced suspension and a powerful engine that provides excellent traction and performance on tough trails and obstacles.</p>
+        </div>
+        <!-- Add more bikes as needed -->
+        </div>
+    </section>
+
+ 
+</body>
+</html>
