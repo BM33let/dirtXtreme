@@ -1,290 +1,181 @@
-/* Hero Section Updates */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Hero Section */
 .hero {
     position: relative;
-    background: url('file:///C:/Users/User/Downloads/download.png') no-repeat center center/cover;
+    background: url('path/to/your-high-quality-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
     overflow: hidden;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
 
 .hero-content {
-    text-align: center;
-    color: #fff;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease-in-out;
 }
 
     .hero-content h1 {
-        font-size: 4rem;
-        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
+        font-size: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
         margin-bottom: 20px;
-        animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero-content .btn {
-        background: linear-gradient(45deg, #ff4500, #0073e6);
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        color: #fff;
-        text-transform: uppercase;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        animation: bounce 2s infinite;
-    }
-
-        .hero-content .btn:hover {
-            background: linear-gradient(45deg, #0073e6, #ff4500);
-            transform: scale(1.1);
-        }
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-.dirtbikes-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Display three items per row */
-    gap: 20px; /* Space between the cards */
-    margin: 20px;
-    justify-items: center; /* Center-align the items */
-}
-
-.dirtbike {
-    max-width: 300px; /* Ensure cards are not too wide */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-    .dirtbike img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px 8px 0 0;
-    }
-
-    .dirtbike:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    }
-
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-    .footer a {
-        color: #0073e6;
-        text-decoration: none;
-        margin: 0 15px;
-    }
-
-        .footer a:hover {
-            color: #ff4500;
-        }
-
-
-/* General Settings */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('file:///C:/Users/User/Downloads/download.png') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-content {
-    text-align: center;
-    color: #fff;
-}
-
-    .hero-content h1 {
-        font-size: 4.5rem;
-        font-weight: 700;
-        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        color: #ff6347; /* Bright orange for text */
     }
 
     .hero-content p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-bottom: 30px;
+        color: #f0f0f0;
     }
 
     .hero-content .btn {
-        background: #0078d7;
-        color: #fff;
+        display: inline-block;
         padding: 15px 40px;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 50px;
+        background: linear-gradient(135deg, #ff4500, #ff6347);
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
         text-transform: uppercase;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         cursor: pointer;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
         .hero-content .btn:hover {
-            background: #005bb5;
             transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 99, 71, 0.8);
         }
-
-/* General Settings */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f7fc; /* Light background for a clean look */
-    color: #333;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('file:///C:/Users/User/Downloads/download.png') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: white;
-}
-
-.hero-content h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.hero-content .btn {
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 50px;
-    text-transform: uppercase;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.hero-content .btn:hover {
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    transform: scale(1.1);
-}
 
 /* Dirtbikes Section */
 .dirtbikes-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 30px;
     padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .dirtbike {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background: #2c2c2c; /* Dark grey matching background */
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
-.dirtbike img {
-    max-width: 100%;
-    border-radius: 10px 10px 0 0;
+    .dirtbike::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), transparent);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .dirtbike:hover::before {
+        opacity: 1;
+    }
+
+    .dirtbike img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.dirtbike-content {
+    padding: 20px;
+    text-align: center;
 }
 
 .dirtbike h3 {
-    font-size: 1.5rem;
-    color: #2575fc;
-    margin: 15px 0;
+    font-size: 1.8rem;
+    color: #ff6347; /* Highlight title */
+    margin-bottom: 10px;
 }
 
 .dirtbike p {
     font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.dirtbike .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f05454;
 }
 
 .dirtbike:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer */
 .footer {
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
-.footer a {
-    color: #2575fc;
-    text-decoration: none;
-    margin: 0 15px;
-}
+    .footer a {
+        color: #ff4500;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+    }
 
-.footer a:hover {
-    color: #ff7eb3;
-}
-
+        .footer a:hover {
+            color: #ff6347;
+        }
