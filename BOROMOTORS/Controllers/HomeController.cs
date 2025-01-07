@@ -30,3 +30,14 @@ namespace BOROMOTORS.Controllers
         }
     }
 }
+
+// Controllers/HomeController.cs
+public class HomeController : Controller
+{
+    public IActionResult Reviews()
+    {
+        return View();  // Това ще изведе Views/Home/Reviews.cshtml
+    }
+}
+
+

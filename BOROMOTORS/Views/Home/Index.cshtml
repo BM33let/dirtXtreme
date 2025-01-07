@@ -17,6 +17,66 @@
             cursor: not-allowed;
             pointer-events: none;
         }
+
+        /* Стилове за новите бутони */
+        .custom-button {
+            padding: 8px 20px; /* Намаляваме размера на бутоните */
+            font-size: 14px; /* По-малък шрифт */
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ff4500, #ff6347);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin: 10px 0; /* Разстояние между бутоните */
+        }
+
+            .custom-button:hover {
+                background: linear-gradient(135deg, #ff8a80, #ff5252);
+                transform: scale(1.05);
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .custom-button:active {
+                transform: scale(0.95);
+                box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+            }
+
+        /* Контейнер за бутоните */
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Поставя бутоните един под друг */
+            align-items: center;
+            margin-top: 20px; /* Разстояние от предишния елемент */
+        }
+
+        /* Стилове за бутона SHOP NOW */
+        .btn {
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #ff4500, #ff6347);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+            .btn:hover {
+                background: linear-gradient(135deg, #ff8a80, #ff5252);
+                transform: scale(1.05);
+                box-shadow: 0px 6px 12px rgba(255, 99, 71, 0.8);
+            }
+
+            .btn:active {
+                transform: scale(0.95);
+                box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+            }
+
     </style>
 </head>
 <body>
@@ -26,7 +86,6 @@
         </div>
     </header>
 
-
     <section class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
@@ -34,6 +93,19 @@
                 <p>Your ultimate destination for off-road adventures.</p>
                 <!-- Работещ бутон -->
                 <a href="/DirtBike/Index" class="btn">Shop Now</a>
+                <!-- Новите бутони под SHOP NOW -->
+                <div class="button-container">
+                    <a href="https://www.google.com/maps?q=-43.4856757,172.6577761" target="_blank">
+                        <button class="custom-button">
+                            Вижте местоположението на Dirt Xtreme на картата
+                        </button>
+                    </a>
+                    <a href="@Url.Action("Reviews", "Home")">
+                        <button class="custom-button">
+                            Отзиви на клиенти
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

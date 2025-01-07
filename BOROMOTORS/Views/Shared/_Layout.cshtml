@@ -43,3 +43,17 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<audio id="background-music" autoplay loop>
+    <source src="/music/Sumo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    const music = document.getElementById('background-music');
+    music.volume = 0.3; // Adjust the volume (0.0 to 1.0)
+</script>
+
+
+
+
+
